@@ -1,5 +1,6 @@
-import logo from './logo.svg'
-function Heder() {
+import logo from './logo.svg';
+import './Header.css';
+function Header() {
     return (
         <heder className=' App-heder' >
             <img src={logo} className="App-logo" alt="logo" />
@@ -17,3 +18,4 @@ function Heder() {
         </heder>
     )
 }
+export default Header;

@@ -1,3 +1,4 @@
+import './Article.css';
 function Article() {
     return (
         <article>
@@ -16,3 +17,4 @@ function Article() {
         </article>
     )
 }
+export default Article;
