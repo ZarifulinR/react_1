@@ -1,32 +1,47 @@
 import './Article.css';
+import gender from '../img/male.png';
 function Article(props) {
-    let {title,content}= props;
+    // let {title,content}= props;
+         let {db}=props;
     return (
+
         <article>
-            <h1 style={{color:"darkblue"}} >{title}</h1>
-            {content}
-            {/* <h2>
-                Современные десктопные процессоры архитектуры x86
-                общие принципы работы (x86 CPU digest 2.0)
-            </h2>
-
-            <ы
-
-            <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut architecto, suscipit distinctio adipisci iusto nobis non impedit incidunt. Corrupti eveniet animi obcaecati rem. Facilis tempora soluta itaque illo deleniti quo?</p>
-            <lo>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </lo> */}
-
+            <div className='app'>
+                <div className='card'>
+                    <img src={db.photo} alt="Photo" />
+                    <div className='name' >{db.name} {db.surname}</div>
+                    <div className='gender' >
+                        <img src={gender} alt="Gender"/>
+                    </div>
+                    <div className='age'>{db.age}</div>
+                </div>
+            </div>
         </article>
+        // <article>
+        //     {/* <h1 style={{color:"darkblue"}} >{title}</h1> */}
+        //     {content}
+        //     {/* <h2>
+        //         Современные десктопные процессоры архитектуры x86
+        //         общие принципы работы (x86 CPU digest 2.0)
+        //     </h2>
+
+        //     <ы
+
+        //     <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut architecto, suscipit distinctio adipisci iusto nobis non impedit incidunt. Corrupti eveniet animi obcaecati rem. Facilis tempora soluta itaque illo deleniti quo?</p>
+        //     <lo>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //     </lo> */}
+
+        // </article>
     )
 }
 Article.defaultProps = 
