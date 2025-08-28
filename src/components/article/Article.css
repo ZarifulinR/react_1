@@ -43,6 +43,6 @@ article
 }
 .card:hover{
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgb(0,0,0,0.2);
-    border-color: #007bff;
+    box-shadow: 0 10px 15px rgb(0,0,0,0.2);
+    border-color: #ff0033;
 }
