@@ -1,5 +1,7 @@
 import './Article.css';
-import gender from '../img/male.png';
+import male from '../img/male.png';
+import female from '../img/female.png';
+
 function Article(props) {
     // let {title,content}= props;
          let {db}=props;
@@ -7,14 +9,29 @@ function Article(props) {
 
         <article>
             <div className='app'>
-                <div className='card'>
+                {/* <div className='card'>
                     <img src={db.photo} alt="Photo" />
                     <div className='name' >{db.name} {db.surname}</div>
                     <div className='gender' >
                         <img src={gender} alt="Gender"/>
                     </div>
                     <div className='age'>{db.age}</div>
-                </div>
+                </div> */}
+                {
+                    Object.keys(db).map(elem=>{
+                        return(
+                            <div className='card' key={elem} >
+                                <img src={db[elem].photo}alt='Photo'/>
+                                <div className='str'>
+                                        <div className='name'>{db[elem].name} {db[elem].surname}</div>
+                                        <div className='age'>{db[elem].age}</div>
+                                </div>
+                                <div className='gender'>  <img src={db[elem].pol === 'male' ? male : female} alt='Gender'/> </div>
+
+                            </div>
+                        )
+                    })
+                }
             </div>
         </article>
         // <article>

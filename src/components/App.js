@@ -12,7 +12,7 @@ function App(props) {
     <div className="App">
       {/* <Header /> */}
       <Nav navigation={props.navigation} />
-      <Article db={db[0]} />
+      <Article db={db} />
 
 
       {/* <Article/> */}
